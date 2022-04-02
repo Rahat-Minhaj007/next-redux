@@ -1,5 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+import axios from "axios"
+
+export const getData = async () => {
+  return axios.get(`https://jsonplaceholder.typicode.com/posts`);
 }
